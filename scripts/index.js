@@ -12,7 +12,6 @@ function accumulateCustomerData(retrievedData) {
     ];
     storeCustomerData(allOrders);
     // console.log(retrievedData);
-    console.log(allOrders);
 
 }
 
@@ -38,10 +37,13 @@ function drawCustomerToDetail(object) {
     customerDetails.textContent = ''
 
     const coffeeDiv = document.createElement('div');
+    const sizeDiv = document.createElement('div')
 
-    coffeeDiv.textContent = object.coffee
+    coffeeDiv.textContent = `customer coffee type is: ${object.coffee}`
+    sizeDiv.textContent = `Coffee size is : ${object.size}`
 
     customerDetails.appendChild(coffeeDiv)
+    customerDetails.appendChild(sizeDiv)
 
 }
 function drawCustomerToList() {
@@ -96,7 +98,7 @@ function retrieveCustomerData() {
     })
 };
 // main functions that runs api fetch
-loadCustomerData(); 
+// loadCustomerData(); 
 function main() {
     let ordersInStorage = loadCustomerData(); 
     if (ordersInStorage) {

@@ -17,6 +17,7 @@ body {
 }
 .head {
     height:8%;
+    text-align: center;
 }
 .content {
     height: 80%;
@@ -31,11 +32,28 @@ body {
     overflow-x: scroll;
     overflow-y: scroll;
     list-style: none;
-    align-content: center;
-
+    text-align:center;
 }
+
+li{
+    height: 23px;
+}
+
+li a:hover {
+    font-size:16.5px;
+    font-style: bold;
+}
+
+
+
 .orders {
     height: 100%;
     width: 70%;
     border: 1px solid black;
+    display: flex;
+    align-items: center;
+    font-size: 40px;
+    font-style: bold;
+    flex-direction: column;
+    justify-content: center;
 }
